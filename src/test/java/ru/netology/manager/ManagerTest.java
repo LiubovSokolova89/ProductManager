@@ -44,25 +44,23 @@ public class ManagerTest {
          Product[] expected = {};
     }
 
-//    @Test
-//    public void ShouldRemoveById() {
+    @Test
+    public void ShouldRemoveById() {
 
-//        repo.GetAllSavedProducts(Book1);
-//        repo.GetAllSavedProducts(Book2);
-//        repo.GetAllSavedProducts(Book3);
-//        repo.GetAllSavedProducts(Smartphone1);
-//        repo.GetAllSavedProducts(Smartphone2);
-//        repo.GetAllSavedProducts(Smartphone3);
+        manager.add(Book1);
+        manager.add(Book2);
+        manager.add(Book3);
+        manager.add(Smartphone1);
+        manager.add(Smartphone2);
+        manager.add(Smartphone3);
 
-//        repo.removeById(Book1.getId());
+        repo.removeById(Book1.getId());
 
-//        Product[] actual = repo.
-//        Product[] expected = {Book2, Book3, Smartphone1, Smartphone2, Smartphone3};
-
-
-//    }
+        Product[] actual = manager.findAll();
+        Product[] expected = {Book2 , Book3, Smartphone1, Smartphone2, Smartphone3};
 
 
+    }
 
 
 }
