@@ -12,7 +12,7 @@ public class Manager {
 
 
     public void add(Product product) {
-        repo.GetAllSavedProducts(product);
+        repo.getAllSavedProducts(product);
     }
 
     public Product[] findAll() {
