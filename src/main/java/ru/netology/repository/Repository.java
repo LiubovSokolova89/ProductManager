@@ -5,18 +5,18 @@ import ru.netology.not.found.exception.NotFoundException;
 import ru.netology.product.Product;
 
 public class Repository {
-    protected Product[] products = new Product[0];
+    private Product[] products = new Product[0];
 
     public Repository() {
     }
 
 
     public void getAllSavedProducts(Product product) {
-        if(findById(product.getId()) != null) {
+        if (findById(product.getId()) != null) {
             throw new AlreadyExistsException("Товар с таким Id" + product.getId() + "уже существует");
         }
         Product[] tmp = new Product[products.length + 1];
-        for(int i = 0; i < products.length; i++) {
+        for (int i = 0; i < products.length; i++) {
             tmp[i] = products[i];
         }
         tmp[tmp.length - 1] = product;
@@ -38,14 +38,14 @@ public class Repository {
         products = tmp;
     }
 
-        public Product findById(int id) {
-            for (Product product : products) {
-                if (product.getId() == id) {
-                    return product;
-                }
+    public Product findById(int id) {
+        for (Product product : products) {
+            if (product.getId() == id) {
+                return product;
             }
-            return null;
         }
+        return null;
+    }
 
 
     public Product[] findAll() {

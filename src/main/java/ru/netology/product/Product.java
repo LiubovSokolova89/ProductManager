@@ -6,6 +6,9 @@ public class Product {
     protected String name;
     protected int price;
 
+    public Product() {
+    }
+
 
     public Product(int id, String name, int price) {
         this.id = id;

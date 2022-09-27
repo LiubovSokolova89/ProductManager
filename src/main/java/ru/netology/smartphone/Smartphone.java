@@ -5,6 +5,10 @@ import ru.netology.product.Product;
 public class Smartphone extends Product {
     protected String manufacturer;
 
+    public Smartphone() {
+        super();
+    }
+
     public Smartphone(int id, String name, int price, String manufacturer) {
         super(id, name, price);
         this.manufacturer = manufacturer;

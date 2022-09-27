@@ -1,7 +1,7 @@
 package ru.netology.repository;
 
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import ru.netology.already.exists.exception.AlreadyExistsException;
 import ru.netology.book.Book;
 import ru.netology.manager.Manager;
@@ -9,9 +9,7 @@ import ru.netology.not.found.exception.NotFoundException;
 import ru.netology.product.Product;
 import ru.netology.smartphone.Smartphone;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertThrows;
-import static org.testng.internal.junit.ArrayAsserts.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class RepositoryTest {
 
@@ -79,7 +77,7 @@ public class RepositoryTest {
 
         Product[] actual = repo.findAll();
 
-        assertArrayEquals(expected , actual);
+        Assertions.assertArrayEquals(expected , actual);
 
     }
 
@@ -100,4 +98,3 @@ public class RepositoryTest {
     }
 
 }
-
