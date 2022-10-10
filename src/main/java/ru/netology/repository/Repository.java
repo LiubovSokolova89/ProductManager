@@ -1,8 +1,9 @@
 package ru.netology.repository;
 
 import ru.netology.already.exists.exception.AlreadyExistsException;
+import ru.netology.data.Product;
 import ru.netology.not.found.exception.NotFoundException;
-import ru.netology.product.Product;
+
 
 public class Repository {
     private Product[] products = new Product[0];
